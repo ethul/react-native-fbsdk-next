@@ -8,7 +8,7 @@
 
 package com.facebook.reactnative.androidsdk;
 
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;
 
 import com.facebook.FacebookSdk;
 import com.facebook.react.bridge.BaseJavaModule;
