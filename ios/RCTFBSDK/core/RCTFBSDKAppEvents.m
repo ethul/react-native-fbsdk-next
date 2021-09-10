@@ -98,7 +98,7 @@ RCT_EXPORT_METHOD(getAdvertiserID:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 {
   @try {
-    NSString *advertiserID = [FBSDKAppEventsUtility advertiserID];
+    NSString *advertiserID = [FBSDKAppEventsUtility.shared advertiserID];
     resolve(advertiserID);
   }
   @catch (NSError *error) {
@@ -108,9 +108,6 @@ RCT_EXPORT_METHOD(getAdvertiserID:(RCTPromiseResolveBlock)resolve
 
 RCT_EXPORT_METHOD(updateUserProperties:(NSDictionary *)parameters)
 {
-  parameters = RCTDictionaryWithoutNullValues(parameters);
-
-  [FBSDKAppEvents updateUserProperties:parameters handler:nil];
 }
 
 RCT_EXPORT_METHOD(setUserData:(NSDictionary *)userData)
